@@ -1,3 +1,4 @@
+package SortInWave;
 public class sortInWave {
 
     public static void main(String[] args) {
