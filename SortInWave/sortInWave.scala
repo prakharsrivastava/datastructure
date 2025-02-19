@@ -5,7 +5,7 @@ object SortInWaves extends App {
   SortInWav(arr)
   arr.foreach(println)
 }
-
+//o(n)
 def SortInWav(arr:Array[Int])={
    for (i <- 0 until arr.length-1 by 2) {
     if(i>0 && arr(i)< arr(i-1)){ 
