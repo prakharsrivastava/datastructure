@@ -13877,3 +13877,404 @@ Feb 21, 2025 4:44:22 P.M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint not
 WARNING: Unsupported notification method: metals/windowStateDidChange
 Feb 21, 2025 4:44:25 P.M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
 INFO: Unsupported notification method: $/setTrace
+Feb 21, 2025 4:44:40 P.M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+WARNING: Unsupported notification method: metals/windowStateDidChange
+Feb 21, 2025 4:45:32 P.M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+WARNING: Unsupported notification method: metals/windowStateDidChange
+Feb 21, 2025 4:45:37 P.M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+WARNING: Unsupported notification method: metals/windowStateDidChange
+Feb 21, 2025 4:45:39 P.M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+WARNING: Unsupported notification method: metals/windowStateDidChange
+Feb 21, 2025 4:56:58 P.M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+WARNING: Unsupported notification method: metals/windowStateDidChange
+Feb 21, 2025 4:57:03 P.M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+WARNING: Unsupported notification method: metals/windowStateDidChange
+Feb 21, 2025 4:57:05 P.M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleNotification
+WARNING: Notification threw an exception: {
+  "jsonrpc": "2.0",
+  "method": "metals/didFocusTextDocument",
+  "params": [
+    "class:/Users/admin/datastructure/Count%20Word/sortInWave.class"
+  ]
+}
+java.nio.file.FileSystemNotFoundException: Provider "class" not installed
+	at java.base/java.nio.file.Path.of(Path.java:212)
+	at java.base/java.nio.file.Paths.get(Paths.java:98)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionURIMtags.toAbsolutePath(MtagsEnrichments.scala:130)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionStringMtags.toAbsolutePath(MtagsEnrichments.scala:190)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionString.toAbsolutePath(MetalsEnrichments.scala:777)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionString.toAbsolutePath(MetalsEnrichments.scala:774)
+	at scala.meta.internal.metals.WorkspaceLspService.didFocus(WorkspaceLspService.scala:745)
+	at scala.meta.metals.lsp.DelegatingScalaService.didFocus(DelegatingScalaService.scala:42)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$recursiveFindRpcMethods$0(GenericEndpoint.java:65)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.notify(GenericEndpoint.java:160)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleNotification(RemoteEndpoint.java:231)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:198)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:185)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:97)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:114)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:577)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+
+Feb 21, 2025 4:57:05 P.M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleNotification
+WARNING: Notification threw an exception: {
+  "jsonrpc": "2.0",
+  "method": "metals/didFocusTextDocument",
+  "params": [
+    "class:/Users/admin/datastructure/Count%20Word/sortInWave.class"
+  ]
+}
+java.nio.file.FileSystemNotFoundException: Provider "class" not installed
+	at java.base/java.nio.file.Path.of(Path.java:212)
+	at java.base/java.nio.file.Paths.get(Paths.java:98)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionURIMtags.toAbsolutePath(MtagsEnrichments.scala:130)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionStringMtags.toAbsolutePath(MtagsEnrichments.scala:190)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionString.toAbsolutePath(MetalsEnrichments.scala:777)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionString.toAbsolutePath(MetalsEnrichments.scala:774)
+	at scala.meta.internal.metals.WorkspaceLspService.didFocus(WorkspaceLspService.scala:745)
+	at scala.meta.metals.lsp.DelegatingScalaService.didFocus(DelegatingScalaService.scala:42)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$recursiveFindRpcMethods$0(GenericEndpoint.java:65)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.notify(GenericEndpoint.java:160)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleNotification(RemoteEndpoint.java:231)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:198)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:185)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:97)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:114)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:577)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+
+Feb 21, 2025 4:57:05 P.M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleNotification
+WARNING: Notification threw an exception: {
+  "jsonrpc": "2.0",
+  "method": "metals/didFocusTextDocument",
+  "params": [
+    "class:/Users/admin/datastructure/Count%20Word/SubarraySumStream.class"
+  ]
+}
+java.nio.file.FileSystemNotFoundException: Provider "class" not installed
+	at java.base/java.nio.file.Path.of(Path.java:212)
+	at java.base/java.nio.file.Paths.get(Paths.java:98)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionURIMtags.toAbsolutePath(MtagsEnrichments.scala:130)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionStringMtags.toAbsolutePath(MtagsEnrichments.scala:190)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionString.toAbsolutePath(MetalsEnrichments.scala:777)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionString.toAbsolutePath(MetalsEnrichments.scala:774)
+	at scala.meta.internal.metals.WorkspaceLspService.didFocus(WorkspaceLspService.scala:745)
+	at scala.meta.metals.lsp.DelegatingScalaService.didFocus(DelegatingScalaService.scala:42)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$recursiveFindRpcMethods$0(GenericEndpoint.java:65)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.notify(GenericEndpoint.java:160)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleNotification(RemoteEndpoint.java:231)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:198)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:185)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:97)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:114)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:577)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+
+Feb 21, 2025 4:57:07 P.M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleNotification
+WARNING: Notification threw an exception: {
+  "jsonrpc": "2.0",
+  "method": "metals/didFocusTextDocument",
+  "params": [
+    "class:/Users/admin/datastructure/Count%20Word/SubarraySumStream.class"
+  ]
+}
+java.nio.file.FileSystemNotFoundException: Provider "class" not installed
+	at java.base/java.nio.file.Path.of(Path.java:212)
+	at java.base/java.nio.file.Paths.get(Paths.java:98)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionURIMtags.toAbsolutePath(MtagsEnrichments.scala:130)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionStringMtags.toAbsolutePath(MtagsEnrichments.scala:190)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionString.toAbsolutePath(MetalsEnrichments.scala:777)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionString.toAbsolutePath(MetalsEnrichments.scala:774)
+	at scala.meta.internal.metals.WorkspaceLspService.didFocus(WorkspaceLspService.scala:745)
+	at scala.meta.metals.lsp.DelegatingScalaService.didFocus(DelegatingScalaService.scala:42)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$recursiveFindRpcMethods$0(GenericEndpoint.java:65)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.notify(GenericEndpoint.java:160)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleNotification(RemoteEndpoint.java:231)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:198)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:185)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:97)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:114)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:577)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+
+Feb 21, 2025 4:57:07 P.M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleNotification
+WARNING: Notification threw an exception: {
+  "jsonrpc": "2.0",
+  "method": "metals/didFocusTextDocument",
+  "params": [
+    "class:/Users/admin/datastructure/Count%20Word/SubarraySumStream%24Accumulator.class"
+  ]
+}
+java.nio.file.FileSystemNotFoundException: Provider "class" not installed
+	at java.base/java.nio.file.Path.of(Path.java:212)
+	at java.base/java.nio.file.Paths.get(Paths.java:98)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionURIMtags.toAbsolutePath(MtagsEnrichments.scala:130)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionStringMtags.toAbsolutePath(MtagsEnrichments.scala:190)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionString.toAbsolutePath(MetalsEnrichments.scala:777)
+	at scala.meta.internal.metals.MetalsEnrichments$XtensionString.toAbsolutePath(MetalsEnrichments.scala:774)
+	at scala.meta.internal.metals.WorkspaceLspService.didFocus(WorkspaceLspService.scala:745)
+	at scala.meta.metals.lsp.DelegatingScalaService.didFocus(DelegatingScalaService.scala:42)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$recursiveFindRpcMethods$0(GenericEndpoint.java:65)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.notify(GenericEndpoint.java:160)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleNotification(RemoteEndpoint.java:231)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:198)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:185)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:97)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:114)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:577)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+
+2025.02.21 16:57:15 WARN  no build target for: /Users/admin/datastructure/Count Word/WordFrequencyCounter.java
+2025.02.21 16:57:16 INFO  no build target found for /Users/admin/datastructure/Count Word/WordFrequencyCounter.java. Using presentation compiler with project's scala-library version: 3.3.5
+2025.02.21 16:57:16 INFO  no build target found for /Users/admin/datastructure/Count Word/WordFrequencyCounter.java. Using presentation compiler with project's scala-library version: 3.3.5
+Exception in thread "pool-27-thread-1" java.io.IOException: Is a directory
+	at java.base/sun.nio.ch.FileDispatcherImpl.read0(Native Method)
+	at java.base/sun.nio.ch.FileDispatcherImpl.read(FileDispatcherImpl.java:48)
+	at java.base/sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:339)
+	at java.base/sun.nio.ch.IOUtil.read(IOUtil.java:305)
+	at java.base/sun.nio.ch.IOUtil.read(IOUtil.java:282)
+	at java.base/sun.nio.ch.FileChannelImpl.read(FileChannelImpl.java:240)
+	at java.base/sun.nio.ch.ChannelInputStream.read(ChannelInputStream.java:74)
+	at java.base/sun.nio.ch.ChannelInputStream.read(ChannelInputStream.java:103)
+	at java.base/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:333)
+	at java.base/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:376)
+	at java.base/sun.nio.cs.StreamDecoder.lockedRead(StreamDecoder.java:219)
+	at java.base/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:173)
+	at java.base/java.io.InputStreamReader.read(InputStreamReader.java:189)
+	at java.base/java.io.BufferedReader.fill(BufferedReader.java:161)
+	at java.base/java.io.BufferedReader.implReadLine(BufferedReader.java:371)
+	at java.base/java.io.BufferedReader.readLine(BufferedReader.java:348)
+	at java.base/java.io.BufferedReader.readLine(BufferedReader.java:437)
+	at java.base/java.nio.file.Files.readAllLines(Files.java:3414)
+	at java.base/java.nio.file.Files.readAllLines(Files.java:3452)
+	at scala.meta.internal.metals.StdReporter.$anonfun$1(ReportContext.scala:110)
+	at scala.collection.immutable.List.flatMap(List.scala:294)
+	at scala.meta.internal.metals.StdReporter.readInIds(ReportContext.scala:109)
+	at scala.meta.internal.metals.StdReporter.create(ReportContext.scala:129)
+	at scala.meta.internal.pc.CompilerAccess.handleError(CompilerAccess.scala:223)
+	at scala.meta.internal.pc.CompilerAccess.withSharedCompiler$$anonfun$2(CompilerAccess.scala:171)
+	at scala.Option.getOrElse(Option.scala:201)
+	at scala.meta.internal.pc.CompilerAccess.withSharedCompiler(CompilerAccess.scala:173)
+	at scala.meta.internal.pc.CompilerAccess.$anonfun$1(CompilerAccess.scala:103)
+	at scala.meta.internal.pc.CompilerAccess.onCompilerJobQueue$$anonfun$1(CompilerAccess.scala:246)
+	at scala.meta.internal.pc.CompilerJobQueue$Job.run(CompilerJobQueue.scala:153)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+2025.02.21 16:57:29 WARN  no build target for: /Users/admin/datastructure/Count Word/WordFrequencyCounter.java
+2025.02.21 16:57:29 INFO  no build target found for /Users/admin/datastructure/Count Word/WordFrequencyCounter.java. Using presentation compiler with project's scala-library version: 3.3.5
+2025.02.21 16:57:34 WARN  no build target for: /Users/admin/datastructure/Count Word/WordFrequencyCounter.java
+2025.02.21 16:57:34 INFO  no build target found for /Users/admin/datastructure/Count Word/WordFrequencyCounter.java. Using presentation compiler with project's scala-library version: 3.3.5
+2025.02.21 16:57:36 INFO  no build target found for /Users/admin/datastructure/Count Word/WordFrequencyCounter.java. Using presentation compiler with project's scala-library version: 3.3.5
+Exception in thread "pool-28-thread-1" java.io.IOException: Is a directory
+	at java.base/sun.nio.ch.FileDispatcherImpl.read0(Native Method)
+	at java.base/sun.nio.ch.FileDispatcherImpl.read(FileDispatcherImpl.java:48)
+	at java.base/sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:339)
+	at java.base/sun.nio.ch.IOUtil.read(IOUtil.java:305)
+	at java.base/sun.nio.ch.IOUtil.read(IOUtil.java:282)
+	at java.base/sun.nio.ch.FileChannelImpl.read(FileChannelImpl.java:240)
+	at java.base/sun.nio.ch.ChannelInputStream.read(ChannelInputStream.java:74)
+	at java.base/sun.nio.ch.ChannelInputStream.read(ChannelInputStream.java:103)
+	at java.base/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:333)
+	at java.base/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:376)
+	at java.base/sun.nio.cs.StreamDecoder.lockedRead(StreamDecoder.java:219)
+	at java.base/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:173)
+	at java.base/java.io.InputStreamReader.read(InputStreamReader.java:189)
+	at java.base/java.io.BufferedReader.fill(BufferedReader.java:161)
+	at java.base/java.io.BufferedReader.implReadLine(BufferedReader.java:371)
+	at java.base/java.io.BufferedReader.readLine(BufferedReader.java:348)
+	at java.base/java.io.BufferedReader.readLine(BufferedReader.java:437)
+	at java.base/java.nio.file.Files.readAllLines(Files.java:3414)
+	at java.base/java.nio.file.Files.readAllLines(Files.java:3452)
+	at scala.meta.internal.metals.StdReporter.$anonfun$1(ReportContext.scala:110)
+	at scala.collection.immutable.List.flatMap(List.scala:294)
+	at scala.meta.internal.metals.StdReporter.readInIds(ReportContext.scala:109)
+	at scala.meta.internal.metals.StdReporter.create(ReportContext.scala:129)
+	at scala.meta.internal.pc.CompilerAccess.handleError(CompilerAccess.scala:223)
+	at scala.meta.internal.pc.CompilerAccess.withSharedCompiler$$anonfun$2(CompilerAccess.scala:171)
+	at scala.Option.getOrElse(Option.scala:201)
+	at scala.meta.internal.pc.CompilerAccess.withSharedCompiler(CompilerAccess.scala:173)
+	at scala.meta.internal.pc.CompilerAccess.$anonfun$1(CompilerAccess.scala:103)
+	at scala.meta.internal.pc.CompilerAccess.onCompilerJobQueue$$anonfun$1(CompilerAccess.scala:246)
+	at scala.meta.internal.pc.CompilerJobQueue$Job.run(CompilerJobQueue.scala:153)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+Feb 21, 2025 4:57:49 P.M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+WARNING: Unsupported notification method: metals/windowStateDidChange
+Feb 21, 2025 4:58:44 P.M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+WARNING: Unsupported notification method: metals/windowStateDidChange
+Feb 21, 2025 8:02:42 P.M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+WARNING: Unsupported notification method: metals/windowStateDidChange
+Feb 21, 2025 8:02:44 P.M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+WARNING: Unsupported notification method: metals/windowStateDidChange
+2025.02.21 20:02:45 WARN  no build target for: /Users/admin/datastructure/Count Word/WordFrequencyCounter.java
+2025.02.21 20:02:45 INFO  no build target found for /Users/admin/datastructure/Count Word/WordFrequencyCounter.java. Using presentation compiler with project's scala-library version: 3.3.5
+2025.02.21 20:02:45 INFO  no build target found for /Users/admin/datastructure/Count Word/WordFrequencyCounter.java. Using presentation compiler with project's scala-library version: 3.3.5
+Feb 21, 2025 8:03:26 P.M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+2025.02.21 20:03:26 INFO  no build target found for /Users/admin/datastructure/Count Word/WordFrequencyCounter.scala. Using presentation compiler with project's scala-library version: 3.3.5
+2025.02.21 20:03:26 WARN  no build target for: /Users/admin/datastructure/Count Word/WordFrequencyCounter.scala
+2025.02.21 20:03:34 WARN  no build target for: /Users/admin/datastructure/Count Word/WordFrequencyCounter.scala
+2025.02.21 20:03:34 INFO  no build target found for /Users/admin/datastructure/Count Word/WordFrequencyCounter.scala. Using presentation compiler with project's scala-library version: 3.3.5
+2025.02.21 20:03:34 INFO  no build target found for /Users/admin/datastructure/Count Word/WordFrequencyCounter.scala. Using presentation compiler with project's scala-library version: 3.3.5
+2025.02.21 20:03:34 INFO  no build target found for /Users/admin/datastructure/Count Word/WordFrequencyCounter.scala. Using presentation compiler with project's scala-library version: 3.3.5
+2025.02.21 20:03:36 INFO  no build target found for /Users/admin/datastructure/Count Word/WordFrequencyCounter.scala. Using presentation compiler with project's scala-library version: 3.3.5
+2025.02.21 20:04:05 WARN  no build target for: /Users/admin/datastructure/Count Word/WordFrequencyCounter.scala
+2025.02.21 20:04:05 INFO  no build target found for /Users/admin/datastructure/Count Word/WordFrequencyCounter.scala. Using presentation compiler with project's scala-library version: 3.3.5
+2025.02.21 20:04:05 INFO  no build target found for /Users/admin/datastructure/Count Word/WordFrequencyCounter.scala. Using presentation compiler with project's scala-library version: 3.3.5
+2025.02.21 20:04:05 INFO  no build target found for /Users/admin/datastructure/Count Word/WordFrequencyCounter.scala. Using presentation compiler with project's scala-library version: 3.3.5
+Feb 21, 2025 8:04:29 P.M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+2025.02.21 20:04:30 WARN  no build target for: /Users/admin/datastructure/Count Word/WordFrequencyCounter.scala
+2025.02.21 20:04:30 INFO  no build target found for /Users/admin/datastructure/Count Word/WordFrequencyCounter.scala. Using presentation compiler with project's scala-library version: 3.3.5
+2025.02.21 20:04:30 INFO  no build target found for /Users/admin/datastructure/Count Word/WordFrequencyCounter.scala. Using presentation compiler with project's scala-library version: 3.3.5
+2025.02.21 20:04:35 INFO  Started: Metals version 1.5.1+66-28b4724d-SNAPSHOT in folders '/Users/admin/datastructure' for client Visual Studio Code 1.85.1.
+2025.02.21 20:04:36 INFO  no build target found for /Users/admin/datastructure/Count Word/WordFrequencyCounter.scala. Using presentation compiler with project's scala-library version: 3.3.5
+2025.02.21 20:04:37 INFO  no build target found for /Users/admin/datastructure/Count Word/WordFrequencyCounter.scala. Using presentation compiler with project's scala-library version: 3.3.5
+2025.02.21 20:04:37 WARN  no build tool detected in workspace '/Users/admin/datastructure'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+2025.02.21 20:04:37 WARN  Build server is not auto-connectable.
+2025.02.21 20:04:37 INFO  no build target found for /Users/admin/datastructure/Count Word/WordFrequencyCounter.scala. Using presentation compiler with project's scala-library version: 3.3.5
+2025.02.21 20:04:37 WARN  no build target for: /Users/admin/datastructure/Count Word/WordFrequencyCounter.scala
+2025.02.21 20:04:37 WARN  no build target for: /Users/admin/datastructure/Count Word/WordFrequencyCounter.java
+2025.02.21 20:04:38 INFO  no build target found for /Users/admin/datastructure/Count Word/WordFrequencyCounter.scala. Using presentation compiler with project's scala-library version: 3.3.5
+Feb 21, 2025 8:04:38 P.M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 8
+2025.02.21 20:04:38 INFO  no build target found for /Users/admin/datastructure/Count Word/WordFrequencyCounter.scala. Using presentation compiler with project's scala-library version: 3.3.5
+2025.02.21 20:04:38 INFO  no build target found for /Users/admin/datastructure/Count Word/WordFrequencyCounter.scala. Using presentation compiler with project's scala-library version: 3.3.5
+2025.02.21 20:04:38 INFO  no build target found for /Users/admin/datastructure/Count Word/WordFrequencyCounter.scala. Using presentation compiler with project's scala-library version: 3.3.5
+Feb 21, 2025 8:04:38 P.M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+WARNING: Unsupported notification method: metals/windowStateDidChange
+2025.02.21 20:04:40 INFO  no build target found for /Users/admin/datastructure/Count Word/WordFrequencyCounter.scala. Using presentation compiler with project's scala-library version: 3.3.5
+2025.02.21 20:04:42 INFO  time: code lens generation in 4.77s
+2025.02.21 20:04:42 WARN  Running javac-semanticdb failed for file:///Users/admin/datastructure/Count%20Word/WordFrequencyCounter.java. Output:
+
+2025.02.21 20:04:42 INFO  no build target found for /Users/admin/datastructure/Count Word/WordFrequencyCounter.scala. Using presentation compiler with project's scala-library version: 3.3.5
+Feb 21, 2025 8:05:24 P.M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+WARNING: Unsupported notification method: metals/windowStateDidChange
+Feb 21, 2025 8:05:28 P.M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+WARNING: Unsupported notification method: metals/windowStateDidChange
+2025.02.21 20:05:29 INFO  no build target found for /Users/admin/datastructure/Count Word/WordFrequencyCounter.scala. Using presentation compiler with project's scala-library version: 3.3.5
+Feb 21, 2025 8:05:30 P.M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+WARNING: Unsupported notification method: metals/windowStateDidChange
+Feb 21, 2025 8:07:26 P.M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+WARNING: Unsupported notification method: metals/windowStateDidChange
+Feb 21, 2025 8:08:10 P.M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+WARNING: Unsupported notification method: metals/windowStateDidChange
+Feb 21, 2025 8:15:36 P.M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+WARNING: Unsupported notification method: metals/windowStateDidChange
+Feb 21, 2025 8:15:37 P.M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+WARNING: Unsupported notification method: metals/windowStateDidChange
+Feb 21, 2025 8:15:49 P.M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+WARNING: Unsupported notification method: metals/windowStateDidChange
+Feb 21, 2025 8:16:19 P.M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+WARNING: Unsupported notification method: metals/windowStateDidChange
+Feb 21, 2025 8:16:34 P.M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+WARNING: Unsupported notification method: metals/windowStateDidChange
+Feb 21, 2025 8:17:02 P.M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+WARNING: Unsupported notification method: metals/windowStateDidChange
+Feb 21, 2025 8:17:04 P.M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+WARNING: Unsupported notification method: metals/windowStateDidChange
+Feb 21, 2025 8:17:44 P.M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+WARNING: Unsupported notification method: metals/windowStateDidChange
+Feb 21, 2025 8:17:46 P.M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+WARNING: Unsupported notification method: metals/windowStateDidChange
+Feb 21, 2025 8:17:55 P.M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+WARNING: Unsupported notification method: metals/windowStateDidChange
+Feb 21, 2025 8:17:56 P.M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+WARNING: Unsupported notification method: metals/windowStateDidChange
+Feb 21, 2025 8:18:16 P.M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+WARNING: Unsupported notification method: metals/windowStateDidChange
+Feb 21, 2025 8:18:17 P.M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+WARNING: Unsupported notification method: metals/windowStateDidChange
+Feb 21, 2025 8:19:25 P.M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+WARNING: Unsupported notification method: metals/windowStateDidChange
+Feb 21, 2025 8:20:54 P.M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+WARNING: Unsupported notification method: metals/windowStateDidChange
+Feb 21, 2025 8:20:54 P.M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+WARNING: Unsupported notification method: metals/windowStateDidChange
+Feb 21, 2025 8:20:56 P.M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+WARNING: Unsupported notification method: metals/windowStateDidChange
+Feb 21, 2025 8:21:14 P.M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+WARNING: Unsupported notification method: metals/windowStateDidChange
+Feb 21, 2025 8:21:16 P.M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+WARNING: Unsupported notification method: metals/windowStateDidChange
+Feb 21, 2025 8:22:04 P.M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+WARNING: Unsupported notification method: metals/windowStateDidChange
+Feb 21, 2025 8:22:09 P.M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+WARNING: Unsupported notification method: metals/windowStateDidChange
+Feb 21, 2025 8:22:10 P.M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+WARNING: Unsupported notification method: metals/windowStateDidChange
+Feb 21, 2025 8:22:11 P.M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+WARNING: Unsupported notification method: metals/windowStateDidChange
+Feb 21, 2025 8:23:11 P.M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+WARNING: Unsupported notification method: metals/windowStateDidChange
+Feb 21, 2025 8:23:13 P.M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+WARNING: Unsupported notification method: metals/windowStateDidChange
+Feb 21, 2025 8:24:09 P.M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+WARNING: Unsupported notification method: metals/windowStateDidChange
+Feb 21, 2025 8:24:11 P.M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+WARNING: Unsupported notification method: metals/windowStateDidChange
+Feb 21, 2025 8:24:52 P.M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+WARNING: Unsupported notification method: metals/windowStateDidChange
+Feb 21, 2025 8:24:54 P.M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+WARNING: Unsupported notification method: metals/windowStateDidChange
+Feb 21, 2025 8:24:55 P.M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+WARNING: Unsupported notification method: metals/windowStateDidChange
+Feb 21, 2025 8:24:56 P.M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+WARNING: Unsupported notification method: metals/windowStateDidChange
+Feb 21, 2025 8:24:59 P.M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+WARNING: Unsupported notification method: metals/windowStateDidChange
+Feb 21, 2025 8:25:03 P.M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+WARNING: Unsupported notification method: metals/windowStateDidChange
+Feb 21, 2025 8:25:16 P.M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+WARNING: Unsupported notification method: metals/windowStateDidChange
+Feb 21, 2025 8:25:18 P.M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+WARNING: Unsupported notification method: metals/windowStateDidChange
+Feb 21, 2025 8:26:05 P.M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+WARNING: Unsupported notification method: metals/windowStateDidChange
+Feb 21, 2025 8:26:28 P.M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+WARNING: Unsupported notification method: metals/windowStateDidChange
+Feb 21, 2025 8:26:29 P.M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+WARNING: Unsupported notification method: metals/windowStateDidChange
+Feb 21, 2025 8:26:30 P.M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+WARNING: Unsupported notification method: metals/windowStateDidChange
+Feb 21, 2025 8:27:39 P.M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+WARNING: Unsupported notification method: metals/windowStateDidChange
+Feb 21, 2025 8:29:05 P.M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+WARNING: Unsupported notification method: metals/windowStateDidChange
+Feb 21, 2025 8:29:06 P.M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+WARNING: Unsupported notification method: metals/windowStateDidChange
+Feb 21, 2025 8:29:08 P.M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+WARNING: Unsupported notification method: metals/windowStateDidChange
+Feb 21, 2025 8:29:29 P.M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+WARNING: Unsupported notification method: metals/windowStateDidChange
+Feb 21, 2025 8:29:30 P.M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+WARNING: Unsupported notification method: metals/windowStateDidChange
+Feb 21, 2025 8:29:42 P.M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+WARNING: Unsupported notification method: metals/windowStateDidChange
