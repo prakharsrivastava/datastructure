@@ -7195,3 +7195,7 @@ WARNING: Unmatched cancel notification for request id 12
 2025.02.20 15:35:46 INFO  no build target found for /Users/admin/datastructure/SortInWave/sortInWave.scala. Using presentation compiler with project's scala-library version: 3.3.5
 Feb 20, 2025 3:36:04 P.M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
 INFO: Unsupported notification method: $/setTrace
+Feb 20, 2025 3:36:17 P.M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+WARNING: Unsupported notification method: metals/windowStateDidChange
+Feb 20, 2025 3:36:44 P.M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+WARNING: Unsupported notification method: metals/windowStateDidChange
