@@ -47,3 +47,50 @@ Caused by: java.nio.channels.ClosedByInterruptException
 	at java.base/sun.nio.ch.FileChannelImpl.force(FileChannelImpl.java:538)
 	at org.h2.mvstore.SingleFileStore.sync(SingleFileStore.java:179)
 	... 31 more
+2025-02-21 15:53:09.828938+05:30 database: close
+org.h2.message.DbException: IO Exception: "Closing" [90028-232]
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.mvstore.db.Store.close(Store.java:374)
+	at org.h2.engine.Database.closeOpenFilesAndUnlock(Database.java:1292)
+	at org.h2.engine.Database.closeImpl(Database.java:1254)
+	at org.h2.engine.Database.close(Database.java:1173)
+	at org.h2.engine.Database.close(Database.java:1150)
+	at org.h2.engine.Database.removeSession(Database.java:1077)
+	at org.h2.engine.SessionLocal.close(SessionLocal.java:916)
+	at org.h2.jdbc.JdbcConnection.close(JdbcConnection.java:390)
+	at scala.meta.internal.metals.H2ConnectionProvider.upgradeIfNeeded(H2ConnectionProvider.scala:132)
+	at scala.meta.internal.metals.H2ConnectionProvider.persistentConnection(H2ConnectionProvider.scala:108)
+	at scala.meta.internal.metals.H2ConnectionProvider.tryAutoServer(H2ConnectionProvider.scala:62)
+	at scala.meta.internal.metals.H2ConnectionProvider.connect(H2ConnectionProvider.scala:44)
+	at scala.meta.internal.metals.H2ConnectionProvider.connection(H2ConnectionProvider.scala:34)
+	at scala.meta.internal.metals.Tables.$anonfun$dismissedNotifications$1(Tables.scala:27)
+	at scala.meta.internal.metals.DismissedNotifications$Notification.isDismissed(DismissedNotifications.scala:63)
+	at scala.meta.internal.metals.utils.RequestRegistry.$anonfun$register$1(RequestRegistry.scala:65)
+	at scala.meta.internal.metals.utils.RequestRegistry.$anonfun$register$1$adapted(RequestRegistry.scala:65)
+	at scala.Option.exists(Option.scala:406)
+	at scala.meta.internal.metals.utils.RequestRegistry.register(RequestRegistry.scala:65)
+	at scala.meta.internal.metals.BuildServerConnection.scala$meta$internal$metals$BuildServerConnection$$runWithCanceling$1(BuildServerConnection.scala:522)
+	at scala.meta.internal.metals.BuildServerConnection.$anonfun$register$3(BuildServerConnection.scala:532)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:470)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: IO Exception: "Closing" [90028-232]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:566)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	... 26 more
+Caused by: org.h2.mvstore.MVStoreException: Could not sync file /Users/admin/datastructure/.metals/metals.mv.db [2.3.232/2]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:996)
+	at org.h2.mvstore.SingleFileStore.sync(SingleFileStore.java:181)
+	at org.h2.mvstore.FileStore.writeCleanShutdown(FileStore.java:811)
+	at org.h2.mvstore.FileStore.stop(FileStore.java:277)
+	at org.h2.mvstore.MVStore.closeStore(MVStore.java:693)
+	at org.h2.mvstore.MVStore.close(MVStore.java:643)
+	at org.h2.mvstore.db.Store.close(Store.java:364)
+	... 24 more
+Caused by: java.nio.channels.ClosedByInterruptException
+	at java.base/java.nio.channels.spi.AbstractInterruptibleChannel.end(AbstractInterruptibleChannel.java:199)
+	at java.base/sun.nio.ch.FileChannelImpl.endBlocking(FileChannelImpl.java:177)
+	at java.base/sun.nio.ch.FileChannelImpl.force(FileChannelImpl.java:538)
+	at org.h2.mvstore.SingleFileStore.sync(SingleFileStore.java:179)
+	... 29 more

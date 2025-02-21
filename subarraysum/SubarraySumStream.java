@@ -1,36 +1,27 @@
 import java.util.HashMap;
 import java.util.Map;
-import java.util.stream.IntStream;
 
 public class SubarraySumStream {
-    static class Accumulator {
-        Map<Integer, Integer> prefixSumMap;
-        int currentSum;
-
-        Accumulator() {
-            this.prefixSumMap = new HashMap<>();
-            this.currentSum = 0;
-        }
-    }
 
     public static void findSubarray(int[] arr, int target) {
-        Accumulator acc = new Accumulator();
+        Map<Integer, Integer> prefixSumMap = new HashMap<>();
+        int currentSum = 0; // Now it's a simple int variable
 
-        IntStream.range(0, arr.length).forEach(i -> {
-            acc.currentSum += arr[i];
+        for (int i = 0; i < arr.length; i++) {
+            currentSum += arr[i];
 
-            if (acc.currentSum == target) {
+            if (currentSum == target) {
                 System.out.println("Sum found between indexes 0 to " + i);
-                System.exit(0);
+                return;
             }
 
-            if (acc.prefixSumMap.containsKey(acc.currentSum - target)) {
-                System.out.println("Sum found from indexes " + (acc.prefixSumMap.get(acc.currentSum - target) + 1) + " to " + i);
-                System.exit(0);
+            if (prefixSumMap.containsKey(currentSum - target)) {
+                System.out.println("Sum found from indexes " + (prefixSumMap.get(currentSum - target) + 1) + " to " + i);
+                return;
             }
 
-            acc.prefixSumMap.put(acc.currentSum, i);
-        });
+            prefixSumMap.put(currentSum, i);
+        }
     }
 
     public static void main(String[] args) {
