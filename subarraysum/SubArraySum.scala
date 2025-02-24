@@ -22,6 +22,7 @@ object SubArraySum extends App {
           println(s"Sum found between indexes 0 to $i")
           System.exit(0)
         }
+        prefixSumMap.get(newSum == target).f
 
         prefixSumMap.get(newSum - target).foreach { startIdx =>
           println(s"Sum found from indexes ${startIdx + 1} to $i")
