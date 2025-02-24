@@ -2,7 +2,7 @@
 object x extends App{
 import scala.collection.mutable
    val arr = Array(3, 3, 4, 2, 4, 4, 2, 4, 4)
-   val result=arr.foldLeft(mutable.Map.empty[Int,Int]){
+   val result=arr.foldLeft(Map.empty[Int,Int]){
       (map,a)=>map + (a-> (map.getOrElse(a,0)+1))
    }
    print(result.maxBy(_._2)._1)

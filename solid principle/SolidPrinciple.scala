@@ -29,7 +29,7 @@ object Main extends App {
         def getArea():Int;
     }
 
-    class Rectangles(height:Int,width:Int) extends  Shape{
+    class Rectangles(var height:Int,var width:Int) extends  Shape{
 
      
         def  getArea():Int= {
