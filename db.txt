@@ -1,0 +1,56 @@
+P 
+0
+​
+ salman khan={Black Wallet,Brown Wallet,Red Wallet,Gucci Wallet}
+
+ srk ={Black Wallet,Brown Wallet,Blue Wallet}
+
+Returned by Salman (Algorithm)	SRK’s Wallets (P)	Not SRK’s Wallets (N)
+Wallets Returned (P₀)	✅ TP: {Black Wallet, Brown Wallet}	❌ FP: {Red Wallet, Gucci Wallet}
+Wallets NOT Returned (N₀)	❌ FN: {Blue Wallet}	✅ TN: {Green Wallet, Leather Wallet}
+
+
+Precision= 
+TP+FP
+TP
+​
+ 
+ Recall= 
+TP+FN
+TP
+​
+ //harmoony sometime recall can be higher than precesion
+ F1=2× 
+Precision+Recall
+Precision×Recall
+​
+ 
+ Accuracy tells us what percentage of total predictions were correct.
+ Accuracy= ∣TP∣+∣TN∣ / |D|
+
+ Error Rate tells us how often the algorithm made mistakes.
+ Error Rate= 
+∣FP∣+∣FN∣ / |D|
+
+The G-Measure (or G-Mean) is an alternative to the F1-score. Instead of the harmonic mean, it takes the geometric mean of Precision and Recall.
+
+//Imbalanced datasets
+G= sqRoot(Precision×Recall)
+
+
+Final Verdict: Which Detective is Better?
+If we want to be 100% sure before arresting, ACP Pradyuman wins (High Precision).
+If we don’t want any criminal to escape, Singham wins (High Recall).
+If we need a balance, both have the same F1-Score (72%)!
+🔹 Lesson: The best metric depends on the use case!
+
+✅ Use F1-Score for balanced decisions
+✅ Use G-Measure for imbalanced data
+✅ Use Precision when False Positives are costly
+✅ Use Recall when False Negatives are costly
+
+​
+ Extendible Hashing]. A global directory of bitvalues up to a certain length is maintained as primary hash buckets.One or more directory pages point to local pages. When a local pageoverﬂows, the number of directory pages is doubled and one more bit isused to hash a key
+
+​
+ 
