@@ -1,4 +1,4 @@
-file://<WORKSPACE>/Count%20Word/CountWords.java
+file://<WORKSPACE>/code_java.java
 ### java.util.NoSuchElementException: next on empty iterator
 
 occurred in the presentation compiler.
@@ -7,31 +7,11 @@ presentation compiler configuration:
 
 
 action parameters:
-offset: 361
-uri: file://<WORKSPACE>/Count%20Word/CountWords.java
+offset: 14
+uri: file://<WORKSPACE>/code_java.java
 text:
 ```scala
-
-import java.io.IOException;
-import java.nio.file.Files;
-
-import java.nio.file.Paths;
-import java.util.stream.IntStream;
-
-public class CountWords {
-
-    public static void count(String FilePath) throws IOException {
-    IntStream.range(0, 6).filter(i->i%2==0).forEach(i-> System.out.println(i));
-      byte[] x = Files.readAllBytes(Paths.get(FilePath));
-      S@@=new String(x).split("\\s+");
-    }
-
-    public static void main(String[] args) {
-        int[] arr = {2, 12, -2, -20, 10, 0};
-        count("<WORKSPACE>/Count Word/g.json");
-    }
-}
-
+class code_jav@@
 ```
 
 
