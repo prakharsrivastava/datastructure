@@ -53,4 +53,226 @@ If we need a balance, both have the same F1-Score (72%)!
  Extendible Hashing]. A global directory of bitvalues up to a certain length is maintained as primary hash buckets.One or more directory pages point to local pages. When a local pageoverﬂows, the number of directory pages is doubled and one more bit isused to hash a key
 
 ​
+ Jaccard Similarity (for Sets)
+Jaccard Similarity measures the overlap between two sets and is calculated as:
+
+
+J(A,B)= ∣A∩B∣/
+∣A∪B∣
+
+​
  
+🔹 Example: Comparing Two Articles by Keywords
+Suppose we have two articles with keywords:
+
+Article 1: {"data", "science", "AI", "ML"}
+Article 2: {"AI", "ML", "deep learning", "NLP"}
+
+A={"data","science","AI","ML"}
+
+B={"AI","ML","deeplearning","NLP"}
+
+Cosine Similarity (for High-Dimensional Vectors)
+cos(θ)= A⋅B/
+∣∣A∣∣⋅∣∣B∣∣
+
+​
+Hamming Distance (for Binary Strings)
+A = 1 0 1 1 1 0 1
+B = 1 0 0 1 0 0 1
+-----------------
+Diff= 0 0 1 0 1 0 0  (2 positions differ)
+
+Euclidean Distance (for Numeric Data)
+ d(A,B)= 
+(5−2) 
+2
+ +(7−3) 
+2
+ 
+​
+Understanding Hamming Space
+For example:
+
+10101 and 10011 → Hamming distance = 2 (since two bits are different)
+11000 and 11001 → Hamming distance = 1 (one bit is different)
+We simplify numbers by dividing each coordinate by 10 and rounding:
+
+Point	(x, y)	Quantized (x', y')
+O1	(25, 32)	(2, 3)
+
+tep 2.2: Convert to Binary (Hamming Space)
+We convert the numbers to binary (0s and 1s).
+2 (decimal) = 110 (binary)
+3 (decimal) = 111 (binary)
+So, (2,3) → 1100000 1110000
+
+Step 3: Applying Locality Sensitive Hashing (LSH)
+LSH randomly picks bits from the binary strings and groups similar data points together.
+
+We use 4 hash tables (l = 4)
+Each table picks 3 random bits (k = 3) from the binary strings
+For example, in Hash Table 1 (l = 1), LSH picks bits 2, 9, and 13:
+
+Step 3: Applying Locality Sensitive Hashing (LSH)
+LSH randomly picks bits from the binary strings and groups similar data points together.
+
+We use 4 hash tables (l = 4)
+Each table picks 3 random bits (k = 3) from the binary strings
+For example, in Hash Table 1 (l = 1), LSH picks bits 2, 9, and 13:
+
+
+Hash Table 1 (l = 1)
+Picks bits 2, 9, and 13.
+Extracts those bits from each data point.
+
+O5 and Q have the same hash (010), so they are grouped together.
+
+Hash Table 2 (l = 2)
+Picks bits 7, 10, and 14.
+O1, O3, O4, O5, and Q share the same hash (010), so they are grouped.
+
+Hash Table 3 (l = 3)
+Picks bits 1, 5, and 11.
+No match for Q in this table.
+
+Hash Table 4 (l = 4)
+Picks bits 8, 12, and 14.
+O1, O5, O6, O7, and Q share the same hash (100), so they are grouped.
+
+
+5. Finding the Nearest Neighbor (1-NN)
+Now, we count how many times each point appears in the same group as Q.
+
+Point	Times Matched with Q
+O1	2 times
+O3	1 time
+O4	1 time
+O5	3 times (most frequent match)
+O6	1 time
+O7	1 time
+
+Since O5 appears 3 times, it is the nearest neighbor to Q.
+
+
+E2LSH (Euclidean LSH) adapts LSH for Euclidean space, using a technique based on p-stable distributions. Let's break it down.
+E2LSH projects high-dimensional vectors onto a lower-dimensional space while preserving their distances. This is done using p-stable distributions
+
+ LSH for Euclidean space uses random projections instead of bit sampling.
+✔ p-stable distributions preserve distances during hashing.
+✔ Vectors close in L₂ space have similar hash values, improving search efficiency.
+
+Let's say we have 3 points in 2D space:
+v1
+​
+ =(3,7),v 
+2
+​
+ =(4,8),v 
+3
+​
+ =(10,1)
+h 
+a,b
+​
+ (v)=⌊ 
+
+a⋅v+b /r
+​
+ ⌋
+
+ We randomly choose:
+
+𝑎
+=
+(
+0.5
+,
+−
+0.3
+)
+a=(0.5,−0.3) (sampled from 
+𝑁
+(
+0
+,
+1
+)
+N(0,1))
+𝑏
+=
+1.2
+b=1.2
+𝑟
+=
+2.0
+r=2.0
+
+
+
+v 
+1
+​
+  and 
+𝑣
+2
+v 
+2
+​
+  hash to the same bucket (0) → They are similar.
+𝑣
+3
+v 
+3
+​
+  hashes to a different bucket (2) → It is farther away.
+
+
+Multi-Dimensional Hashing & Grid File Structure
+ashing is typically used for single-dimensional keys (e.g., mapping user IDs to hash buckets). However, when data has multiple dimensions (e.g., spatial coordinates in 2D/3D), standard hashing techniques do not work efficiently. Multi-dimensional hashing solves this problem.
+
+
+Concatenation-based Hashing
+Combine multiple dimensions into a single key.
+Example: If we have a (x, y) coordinate, we could hash "x_y".
+Issue: This approach does not preserve spatial locality (i.e., close points might hash to completely different values).
+
+
+Grid-Based Hashing (Grid File Structure)
+Treats each dimension separately and organizes data in a multi-dimensional grid.
+This is more efficient for spatial searching and nearest neighbor queries.
+
+
+Concatenation Hashing	Merges dimensions into one key	Simple but loses spatial locality
+Grid File Hashing	Divides space into grid cells	Efficient for multi-dimensional range queries
+Space-Filling Curves	Maps multi-dimensional data to 1D order	Optimized for disk storage
+
+grid files 
+Assume the X and Y coordinates range from 0 to 100.
+We will divide the space into a 4x4 grid.
+
+Grid files require multi-dimensional indexing, which can be expensive for high dimensions.
+Hard disks are inherently one-dimensional (data is stored sequentially).
+Space-filling curves flatten multi-dimensional space into a 1D sequence, preserving locality better than standard hashing.
+
+
+Space-Filling Curves (Alternative to Grid Files)
+
+
+2 Types of Space-Filling Curves
+(a) Z-Order Curve (Morton Order)
+(2,3)=(10  ,11 )
+
+
+
+b) Hilbert Curve
+ Example Calculation:
+
+Point (0,0) → h = 0
+Point (1,0) → h = 1
+Point (1,1) → h = 2
+Point (0,1) → h = 3
+The Hilbert curve follows this path:
+(0,0) → (1,0) → (1,1) → (0,1)
+
+
