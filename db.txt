@@ -54,3 +54,14 @@ If we need a balance, both have the same F1-Score (72%)!
 
 ​
  
+ Classification of Index Structures
+ Index structures can be classified based on:
+
+Memory-based vs. Disk-based:
+Memory-based index structures are used when the entire dataset fits into memory, and the primary cost is CPU-based rather than I/O operations.
+Disk-based index structures are used when the data doesn't fit in memory, and the goal is to minimize costly disk I/O operations.
+Space-partitioning vs. Data-partitioning:
+Space-partitioning methods divide the data space (vector space) into partitions, where each partition is handled by a child node. Examples include K-d-trees and quadtrees.
+Data-partitioning methods focus on dividing the data itself into balanced chunks, reducing dead space (unused areas). An example is the R-tree, which is commonly used for spatial data
+
+A key advantage of K-d-trees over structures like quadtrees is that the number of children per node is fixed to 2 (binary tree structure). However, the fanout of K-d-trees can still become impractical in high-dimensional spaces, where the depth of the tree grows quickly, resulting in a slower search time.
