@@ -1,0 +1,5 @@
+default method java 
+
+Why: To enhance interfaces with new functionality without breaking existing code.no force implementation to subclass
+When: When adding helper methods, extending functional interfaces, or ensuring backward compatibility.
+Design Pattern: Primarily Decorator Pattern (for extending behavior) and Command Pattern (for functional compatibility).
