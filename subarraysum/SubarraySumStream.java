@@ -4,24 +4,10 @@ import java.util.Map;
 public class SubarraySumStream {
 
     public static void findSubarray(int[] arr, int target) {
-        Map<Integer, Integer> prefixSumMap = new HashMap<>();
-        int currentSum = 0; // Now it's a simple int variable
+           Map<Integer, Integer> prefixSumMap = new HashMap<>();
+        int[] sum = {0}; // Use array to hold sum for mutation within lambda
+        Arrays.stream(arr).forEach(x -> {sum[0] += x; if (sum[0] == target || prefixSumMap.containsKey(sum[0] - target)) System.out.println("Sum found"); else prefixSumMap.put(sum[0], 0);});
 
-        for (int i = 0; i < arr.length; i++) {
-            currentSum += arr[i];
-
-            if (currentSum == target) {
-                System.out.println("Sum found between indexes 0 to " + i);
-                return;
-            }
-
-            if (prefixSumMap.containsKey(currentSum - target)) {
-                System.out.println("Sum found from indexes " + (prefixSumMap.get(currentSum - target) + 1) + " to " + i);
-                return;
-            }
-
-            prefixSumMap.put(currentSum, i);
-        }
     }
 
     public static void main(String[] args) {
