@@ -14746,3 +14746,74 @@ WARNING: QDox parse error in file:///Users/admin/datastructure/datastructure/sub
 2025.02.27 14:58:35 INFO  time: compiled datastructure_d5c0a6989e in 0.81s
 Feb 27, 2025 3:03:02 P.M. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
 INFO: Unsupported notification method: $/setTrace
+2025.02.27 15:05:54 INFO  no build target found for /Users/admin/datastructure/datastructure/subarraysum/single element/single.java. Using presentation compiler with project's scala-library version: 3.6.3
+2025.02.27 15:05:54 WARN  no build target for: /Users/admin/datastructure/datastructure/subarraysum/single element/single.java
+2025.02.27 15:05:54 WARN  No build server connected
+2025.02.27 15:05:54 INFO  compiling datastructure_d5c0a6989e (11 scala sources and 9 java sources)
+2025.02.27 15:05:55 WARN  Running javac-semanticdb failed for file:///Users/admin/datastructure/datastructure/subarraysum/single%20element/single.java. Output:
+
+Feb 27, 2025 3:05:55 P.M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 7
+2025.02.27 15:05:55 INFO  no build target found for /Users/admin/datastructure/datastructure/subarraysum/single element/single.java. Using presentation compiler with project's scala-library version: 3.6.3
+2025.02.27 15:05:56 WARN  Running javac-semanticdb failed for file:///Users/admin/datastructure/datastructure/subarraysum/single%20element/single.java. Output:
+
+2025.02.27 15:05:56 WARN  no build target for: /Users/admin/datastructure/datastructure/subarraysum/single element/single.java
+Feb 27, 2025 3:05:56 P.M. scala.meta.internal.metals.StdReporter $anonfun$create$1
+WARNING: QDox parse error in file:///Users/admin/datastructure/datastructure/subarraysum/single%20element/single.java (full report at: /Users/admin/datastructure/datastructure/.metals/.reports/metals-full/2025-02-27/r_qdox-error_(datastructure_d5c0a6989e)_15-05-56-690.md)
+Feb 27, 2025 3:05:56 P.M. scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/admin/datastructure/datastructure/.metals/.reports/metals-full/2025-02-27/r_compiler-error_15-05-56-902.md
+2025.02.27 15:05:57 INFO  time: compiled datastructure_d5c0a6989e in 2.15s
+2025.02.27 15:05:57 INFO  compiling datastructure_d5c0a6989e (11 scala sources and 9 java sources)
+2025.02.27 15:05:58 INFO  time: compiled datastructure_d5c0a6989e in 1.26s
+2025.02.27 15:06:02 INFO  no build target found for /Users/admin/datastructure/datastructure/subarraysum/single element/SingleElementFinder.java. Using presentation compiler with project's scala-library version: 3.6.3
+2025.02.27 15:06:02 WARN  no build target for: /Users/admin/datastructure/datastructure/subarraysum/single element/SingleElementFinder.java
+2025.02.27 15:06:02 INFO  no build target found for /Users/admin/datastructure/datastructure/subarraysum/single element/SingleElementFinder.java. Using presentation compiler with project's scala-library version: 3.6.3
+2025.02.27 15:06:02 WARN  Running javac-semanticdb failed for file:///Users/admin/datastructure/datastructure/subarraysum/single%20element/SingleElementFinder.java. Output:
+
+2025.02.27 15:06:02 WARN  No build server connected
+2025.02.27 15:06:02 INFO  Cancelling compilation on scala-cli server
+2025.02.27 15:06:02 INFO  compiling datastructure_d5c0a6989e (11 scala sources and 9 java sources)
+2025.02.27 15:06:02 INFO  no build target found for /Users/admin/datastructure/datastructure/subarraysum/single element/SingleElementFinder.java. Using presentation compiler with project's scala-library version: 3.6.3
+Feb 27, 2025 3:06:03 P.M. scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/admin/datastructure/datastructure/.metals/.reports/metals-full/2025-02-27/r_compiler-error_15-06-03-575.md
+Feb 27, 2025 3:06:03 P.M. scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/admin/datastructure/datastructure/.metals/.reports/metals-full/2025-02-27/r_compiler-error_15-06-03-694.md
+2025.02.27 15:06:03 WARN  Invalid text document uri received from build server: file:///Users/admin/datastructure/datastructure/subarraysum/single%20element/single.java
+2025.02.27 15:06:03 INFO  time: compiled datastructure_d5c0a6989e in 1.22s
+2025.02.27 15:06:03 INFO  compiling datastructure_d5c0a6989e (11 scala sources and 9 java sources)
+2025.02.27 15:06:04 INFO  no build target found for /Users/admin/datastructure/datastructure/subarraysum/single element/SingleElementFinder.java. Using presentation compiler with project's scala-library version: 3.6.3
+Feb 27, 2025 3:06:04 P.M. scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/admin/datastructure/datastructure/.metals/.reports/metals-full/2025-02-27/r_compiler-error_15-06-04-213.md
+2025.02.27 15:06:04 INFO  no build target found for /Users/admin/datastructure/datastructure/subarraysum/single element/SingleElementFinder.java. Using presentation compiler with project's scala-library version: 3.6.3
+2025.02.27 15:06:03 INFO  time: compiled datastructure_d5c0a6989e in 0.78s
+Feb 27, 2025 3:06:04 P.M. scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/admin/datastructure/datastructure/.metals/.reports/metals-full/2025-02-27/r_compiler-error_15-06-04-788.md
+Feb 27, 2025 3:06:04 P.M. org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 38
+2025.02.27 15:06:03 INFO  compiling datastructure_d5c0a6989e (11 scala sources and 9 java sources)
+2025.02.27 15:06:04 INFO  no build target found for /Users/admin/datastructure/datastructure/subarraysum/single element/SingleElementFinder.java. Using presentation compiler with project's scala-library version: 3.6.3
+Feb 27, 2025 3:06:05 P.M. scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/admin/datastructure/datastructure/.metals/.reports/metals-full/2025-02-27/r_compiler-error_15-06-05-070.md
+2025.02.27 15:06:05 INFO  time: compiled datastructure_d5c0a6989e in 0.55s
+2025.02.27 15:06:57 INFO  no build target found for /Users/admin/datastructure/datastructure/subarraysum/single element/SingleElementFinder.java. Using presentation compiler with project's scala-library version: 3.6.3
+2025.02.27 15:06:57 INFO  no build target found for /Users/admin/datastructure/datastructure/subarraysum/single element/SingleElementFinder.java. Using presentation compiler with project's scala-library version: 3.6.3
+Feb 27, 2025 3:06:58 P.M. scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/admin/datastructure/datastructure/.metals/.reports/metals-full/2025-02-27/r_compiler-error_15-06-58-097.md
+2025.02.27 15:06:57 INFO  no build target found for /Users/admin/datastructure/datastructure/subarraysum/single element/SingleElementFinder.java. Using presentation compiler with project's scala-library version: 3.6.3
+2025.02.27 15:06:58 WARN  Running javac-semanticdb failed for file:///Users/admin/datastructure/datastructure/subarraysum/single%20element/SingleElementFinder.java. Output:
+
+2025.02.27 15:06:58 INFO  no build target found for /Users/admin/datastructure/datastructure/subarraysum/single element/SingleElementFinder.java. Using presentation compiler with project's scala-library version: 3.6.3
+Feb 27, 2025 3:06:58 P.M. scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/admin/datastructure/datastructure/.metals/.reports/metals-full/2025-02-27/r_compiler-error_15-06-58-485.md
+2025.02.27 15:06:59 INFO  no build target found for /Users/admin/datastructure/datastructure/subarraysum/single element/SingleElementFinder.java. Using presentation compiler with project's scala-library version: 3.6.3
+2025.02.27 15:06:59 INFO  no build target found for /Users/admin/datastructure/datastructure/subarraysum/single element/SingleElementFinder.java. Using presentation compiler with project's scala-library version: 3.6.3
+2025.02.27 15:06:59 WARN  Running javac-semanticdb failed for file:///Users/admin/datastructure/datastructure/subarraysum/single%20element/SingleElementFinder.java. Output:
+
+2025.02.27 15:07:00 INFO  no build target found for /Users/admin/datastructure/datastructure/subarraysum/single element/SingleElementFinder.java. Using presentation compiler with project's scala-library version: 3.6.3
+Feb 27, 2025 3:07:00 P.M. scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/admin/datastructure/datastructure/.metals/.reports/metals-full/2025-02-27/r_compiler-error_15-07-00-102.md
+2025.02.27 15:07:00 WARN  no build target for: /Users/admin/datastructure/datastructure/subarraysum/single element/SingleElementFinder.java
+2025.02.27 15:07:03 INFO  compiling datastructure_d5c0a6989e (11 scala sources and 9 java sources)
+2025.02.27 15:07:03 INFO  time: compiled datastructure_d5c0a6989e in 0.44s
+2025.02.27 15:18:35 INFO  compiling datastructure_d5c0a6989e (11 scala sources and 9 java sources)
+2025.02.27 15:18:35 INFO  time: compiled datastructure_d5c0a6989e in 0.43s
