@@ -1,24 +1,17 @@
-#Maximum Subarray Sum
-def maxSubarraySum(arr):
-    res = arr[0]  # Global maximum sum
-    maxEnding = arr[0]  # Local maximum subarray sum
-    
-    print(f"Start: maxEnding = {maxEnding}, res = {res}")
+from functools import reduce
 
-    for i in range(1, len(arr)):
-        prev_maxEnding = maxEnding  # Store previous maxEnding for debugging
-        
-        # Update maxEnding: extend or start new subarray
-        maxEnding = max(maxEnding + arr[i], arr[i])
-
-        # Update global maximum
-        res = max(res, maxEnding)
-
-        # Print step details
-        print(f"Step {i}: arr[{i}] = {arr[i]}, Previous maxEnding = {prev_maxEnding}, New maxEnding = {maxEnding}, Updated res = {res}")
-
+def max_subarray_sum(arr):
+    # Using reduce to process the array iteratively
+    res, max_ending = reduce(
+        lambda acc, num: (
+            max(acc[0], max(acc[1] + num, num)),  # Update global max
+            max(acc[1] + num, num)               # Update local max
+        ),
+        arr[1:],  # Start from second element, as first is pre-initialized
+        (arr[0], arr[0])  # Initial values: (global max, local max)
+    )
     return res
 
 # Test case
 arr = [2, 3, -8, 7, -1, 2, 3]
-print("\nMax Subarray Sum:", maxSubarraySum(arr))
+print("Max Subarray Sum:", max_subarray_sum(arr))

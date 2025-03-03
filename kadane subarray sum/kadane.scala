@@ -1,11 +1,13 @@
-from collections import Counter
+object kadanes extends App{
+def maxSubarraySum(arr: Array[Int]): Int = {
+  arr.tail.foldLeft((arr(0), arr(0))) { case ((res, maxEnding), num) =>
+    val newMaxEnding = Math.max(maxEnding + num, num) // Local max
+    val newRes = Math.max(res, newMaxEnding)         // Global max
+    (newRes, newMaxEnding)
+  }._1
+}
 
-arr = [3, 3, 4, 2, 4, 4, 2, 4, 4]
-
-# Using Counter to count occurrences
-frequency_map = Counter(arr)
-
-# Finding the most frequent element
-most_frequent = max(frequency_map, key=frequency_map.get)
-
-print(most_frequent)
+// Test case
+val arr = Array(2, 3, -8, 7, -1, 2, 3)
+println("Max Subarray Sum: " + maxSubarraySum(arr))
+}
