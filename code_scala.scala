@@ -23,6 +23,25 @@ object x extends App {
     val newRes = Math.max(res, newMaxEnding)         // Global max
     (newRes, newMaxEnding)
   }._1
+
+      arr.indices.foldLeft((0, mutable.Map[Int, Int]())) {
+      case ((current, prefixSumMap), i) =>
+        val newSum = current + arr(i)
+
+        if (newSum == target) {
+          println(s"Sum found between indexes 0 to $i")
+          System.exit(0)
+        }
+        prefixSumMap.get(newSum == target).f
+
+        prefixSumMap.get(newSum - target).foreach { startIdx =>
+          println(s"Sum found from indexes ${startIdx + 1} to $i")
+          System.exit(0)
+        }
+
+        prefixSumMap(newSum) = i // Store the prefix sum and index
+        (newSum, prefixSumMap)
+    }
 }
 
 }
