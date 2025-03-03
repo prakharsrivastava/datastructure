@@ -1,27 +1,34 @@
+import java.security.Identity;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.Map;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
+import java.util.stream.Stream;
 
+// input- stream -  index, ar element ,collect grouping  sorting max - comparingByValue
 class code_java{
     public static void main(String[] args) {
-          String text = "Java is awesome! Java streams are powerful. Streams make Java awesome.";
-        String[] words = text.replaceAll("[^a-zA-Z ]", "").split("\\s+");
+        String text = "Java is awesome! Java streams are powerful. Streams make Java awesome.";
+        String[] words = text.replaceAll("[^a-zA-Z ]", "").split("\s+");
+
+        Stream<String> s = Arrays.stream(words);
+
         // Count the frequency of each word (case-insensitive)
         Map<String, Long> wordCounts = Arrays.stream(words)
-                .collect(Collectors.groupingBy(String::toLowerCase, Collectors.counting()));
+                .collect(Collectors.groupingBy(i->i ,Collectors.counting()));
 
         // Display the most frequent words and their frequencies
         wordCounts.entrySet().stream()
-                .sorted(Map.Entry.comparingByValue(Comparator.reverseOrder())) // Sort by frequency (desc)
-                .limit(10) // Change the limit as needed
-                .forEach(entry -> System.out.println(entry.getKey() + " -> " + entry.getValue()));
+                        .sorted(Map.Entry.comparingByValue()) // Sort by frequency (desc)
+                        .limit(10) // Change the limit as needed
+                        .forEach(System.out::println);
 
 
                         int[] arr = {3, 3, 4, 2, 4, 4, 2, 4, 4};
-
+     
+        
         // Finding the most frequent element using Streams
         int mostFrequent = Arrays.stream(arr)
                 .boxed()
@@ -35,11 +42,13 @@ class code_java{
         System.out.println(mostFrequent);
 
         int[] result = Arrays.stream(arr).boxed()
-        .reduce(new int[]{-1, 0}, (acc, num) -> {
-            if (acc[1] == 0) return new int[]{num, 1};
-            if (acc[0] == num) return new int[]{acc[0], acc[1] + 1};
-            return new int[]{acc[0], acc[1] - 1};
-        }, (a, b) -> a);  // Combiner (not used in sequential streams)
+        .reduce(new int[]{-1, 0}, 
+        (x, num) -> {
+            if (x[1] == 0) return new int[]{num, 1};
+            if (x[0] == num) return new int[]{acc[0], acc[1] + 1};
+            return new int[]{x[0], x[1] - 1};
+        }, 
+        (a, b) -> a);  // Combiner (not used in sequential streams)
 
 int candidate = result[0];
 
@@ -60,10 +69,10 @@ int candidate = result[0];
                             return (sum % 3) != 0 ? 1 << i : 0; // If not multiple of 3, set bit
                         })
                         .reduce(0, (a, b) ->{ 
-                            int result = a | b;
+                            int result = a | b
                             System.out.println("Merging bits: " + a + " | " + b + " = " + result);
                             return result;
-                        }
+                        },(a,b->a)
                         );
 
     }
