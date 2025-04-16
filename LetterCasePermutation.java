@@ -4,24 +4,35 @@ public class LetterCasePermutation {
 
     public static List<String> letterCasePermutation(String s) {
         List<String> result = new ArrayList<>();
-        result.add(""); // Start with an empty string
+        backtrack(s, 0, new StringBuilder(), result);
+        return result;
+    }
 
-        for (char ch : s.toCharArray()) {
-            List<String> temp = new ArrayList<>();
-
-            for (String str : result) {
-                if (Character.isLetter(ch)) {
-                    temp.add(str + Character.toLowerCase(ch)); // Lowercase branch
-                    temp.add(str + Character.toUpperCase(ch)); // Uppercase branch
-                } else {
-                    temp.add(str + ch); // Digit, just append
-                }
-            }
-
-            result = temp; // Update result to the new list for next round
+    private static void backtrack(String s, int index, StringBuilder current, List<String> result) {
+        // Base case: If we've processed all characters, add the current combination to the result
+        if (index == s.length()) {
+            result.add(current.toString());
+            return;
         }
 
-        return result;
+        // Get the character at the current index
+        char ch = s.charAt(index);
+
+        if (Character.isLetter(ch)) {
+            // Try both lowercase and uppercase for letters
+            current.append(Character.toLowerCase(ch)); // Add lowercase version
+            backtrack(s, index + 1, current, result);
+            current.deleteCharAt(current.length() - 1); // Remove last character (backtrack)
+
+            current.append(Character.toUpperCase(ch)); // Add uppercase version
+            backtrack(s, index + 1, current, result);
+            current.deleteCharAt(current.length() - 1); // Remove last character (backtrack)
+        } else {
+            // If it's a digit, just add it
+            current.append(ch);
+            backtrack(s, index + 1, current, result);
+            current.deleteCharAt(current.length() - 1); // Remove last character (backtrack)
+        }
     }
 
     public static void main(String[] args) {
