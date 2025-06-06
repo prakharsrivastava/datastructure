@@ -1,0 +1,80 @@
+-- Optional cleanup
+DROP TABLE IF EXISTS views, comments, videos, tags, users;
+DROP TYPE IF EXISTS platform_enum;
+
+-- Enum for platform
+CREATE TYPE platform_enum AS ENUM ('web', 'android', 'ios');
+
+-- USERS
+CREATE TABLE users (
+    id UUID PRIMARY KEY,
+    name VARCHAR(100),
+    email VARCHAR(100),
+    dob DATE,
+    location POINT,
+    createdAt TIMESTAMP
+);
+
+-- TAGS
+CREATE TABLE tags (
+    id UUID PRIMARY KEY,
+    value VARCHAR(50)
+);
+
+-- VIDEOS
+CREATE TABLE videos (
+    id UUID PRIMARY KEY,
+    userID UUID REFERENCES users(id),
+    title VARCHAR(255),
+    description TEXT,
+    thumbnailURL VARCHAR(255),
+    streamURL VARCHAR(255),
+    tags UUID REFERENCES tags(id),
+    uploadedAt TIMESTAMP
+);
+
+-- VIEWS
+CREATE TABLE views (
+    id UUID PRIMARY KEY,
+    userID UUID REFERENCES users(id),
+    videoID UUID REFERENCES videos(id),
+    offset INT,
+    platform platform_enum,
+    createdAt TIMESTAMP
+);
+
+-- COMMENTS
+CREATE TABLE comments (
+    id UUID PRIMARY KEY,
+    userID UUID REFERENCES users(id),
+    videoID UUID REFERENCES videos(id),
+    comment TEXT,
+    createdAt TIMESTAMP
+);
+
+
+
+-- USERS
+INSERT INTO users (id, name, email, dob, location, createdAt) VALUES
+('u1a1a1a1-a1a1-a1a1-a1a1-a1a1a1a1a1a1', 'Alice Johnson', 'alice@example.com', '1990-01-15', POINT(12.34, 56.78), NOW()),
+('u2b2b2b2-b2b2-b2b2-b2b2-b2b2b2b2b2b2', 'Bob Smith', 'bob@example.com', '1985-07-23', POINT(34.56, 78.90), NOW());
+
+-- TAGS
+INSERT INTO tags (id, value) VALUES
+('t1c1c1c1-c1c1-c1c1-c1c1-c1c1c1c1c1c1', 'vlog'),
+('t2d2d2d2-d2d2-d2d2-d2d2-d2d2d2d2d2d2', 'tutorial');
+
+-- VIDEOS
+INSERT INTO videos (id, userID, title, description, thumbnailURL, streamURL, tags, uploadedAt) VALUES
+('v1e1e1e1-e1e1-e1e1-e1e1-e1e1e1e1e1e1', 'u1a1a1a1-a1a1-a1a1-a1a1-a1a1a1a1a1a1', 'Mountain Hike', 'Alice hikes the Alps', 'thumb1.jpg', 'stream1.mp4', 't1c1c1c1-c1c1-c1c1-c1c1-c1c1c1c1c1c1', NOW()),
+('v2f2f2f2-f2f2-f2f2-f2f2-f2f2f2f2f2f2', 'u2b2b2b2-b2b2-b2b2-b2b2-b2b2b2b2b2b2', 'React Crash Course', 'Bob teaches React basics', 'thumb2.jpg', 'stream2.mp4', 't2d2d2d2-d2d2-d2d2-d2d2-d2d2d2d2d2d2', NOW());
+
+-- VIEWS
+INSERT INTO views (id, userID, videoID, offset, platform, createdAt) VALUES
+('vw1g1g1g1-g1g1-g1g1-g1g1-g1g1g1g1g1g1', 'u2b2b2b2-b2b2-b2b2-b2b2-b2b2b2b2b2b2', 'v1e1e1e1-e1e1-e1e1-e1e1-e1e1e1e1e1e1', 120, 'web', NOW()),
+('vw2h2h2h2-h2h2-h2h2-h2h2-h2h2h2h2h2h2', 'u1a1a1a1-a1a1-a1a1-a1a1-a1a1a1a1a1a1', 'v2f2f2f2-f2f2-f2f2-f2f2-f2f2f2f2f2f2', 240, 'android', NOW());
+
+-- COMMENTS
+INSERT INTO comments (id, userID, videoID, comment, createdAt) VALUES
+('c1i1i1i1-i1i1-i1i1-i1i1-i1i1i1i1i1i1', 'u2b2b2b2-b2b2-b2b2-b2b2-b2b2b2b2b2b2', 'v1e1e1e1-e1e1-e1e1-e1e1-e1e1e1e1e1e1', 'Amazing hike views!', NOW()),
+('c2j2j2j2-j2j2-j2j2-j2j2-j2j2j2j2j2j2', 'u1a1a1a1-a1a1-a1a1-a1a1-a1a1a1a1a1a1', 'v2f2f2f2-f2f2-f2f2-f2f2-f2f2f2f2f2f2', 'Great explanation of hooks!', NOW());
